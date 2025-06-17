@@ -29,10 +29,14 @@ import '@ionic/react/css/display.css';
 
 /* import '@ionic/react/css/palettes/dark.always.css'; */
 /* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css';
+// import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Login from './pages/login/Login';
+import { createClient } from '@supabase/supabase-js'
+
+const supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')
 
 setupIonicReact();
 
@@ -43,12 +47,7 @@ const App: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
-            <Route path="/" exact={true}>
-              <Redirect to="/folder/Inbox" />
-            </Route>
-            <Route path="/folder/:name" exact={true}>
-              <Page />
-            </Route>
+            <Route path="/" component={Login} exact />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>

@@ -1,0 +1,76 @@
+ion-content {
+  background-image: url('./../../../public/blob.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logo {
+    max-width: 105px;
+    width: 100%;
+    position: fixed;
+    top: 13rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.form .heading {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.form .heading h3{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form .heading p{
+  font-size: 1rem;
+}
+
+.form .form-input {
+  margin-top: 16px;
+  --background: transparent !important;
+}
+
+.forgot-text p {
+  text-align: end;
+}
+
+.button-login {
+  --padding-start: 4rem !important;
+  --padding-end: 4rem !important;
+
+  display: flex;
+  align-self: center;
+  margin-top: 2.5rem;
+}
+
+.register {
+  position: absolute;
+  top: 95%;
+  z-index: 9999;
+  width: 100%;
+}
+
+.register p {
+  text-align: center;
+  color: #fff;
+
+}
+
+.register p>span {
+  font-weight: bold;
+}
