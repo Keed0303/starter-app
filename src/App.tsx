@@ -35,6 +35,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import Login from './pages/login/Login';
 import { createClient } from '@supabase/supabase-js'
+import Register from './pages/register/Register';
 
 const supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')
 
@@ -46,9 +47,11 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonSplitPane contentId="main">
           <Menu />
-          <IonRouterOutlet id="main">
-            <Route path="/" component={Login} exact />
+            <IonRouterOutlet id="main">
+   
           </IonRouterOutlet>
+                     <Route path="/" component={Login} exact />
+              <Route path="/register" component={Register} exact />
         </IonSplitPane>
       </IonReactRouter>
     </IonApp>
